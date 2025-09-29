@@ -31,7 +31,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 
     - name: Publish project
-      run: dotnet publish -c Release -o out
+      run: dotnet publish ./ContosoPizza.csproj -c Release -o out
 
   docker-build-and-push:
     runs-on: ubuntu-latest

@@ -15,7 +15,7 @@ public class PizzaService : IPizzaService
         new Pizza { Id = 2, Name = "Veggie", IsGlutenFree = true }
     };
 
-    private int _nextId = 3;
+    // private int _nextId = 3;
 
     public List<Pizza> GetAll() => _pizzas;
 }
