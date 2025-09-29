@@ -48,7 +48,8 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t contosopizzaapi:latest .
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/contosopizzaapi:latest .
+      
 
     - name: Push Docker image
-      run: docker push contosopizzaapi:latest
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/contosopizzaapi:latest
